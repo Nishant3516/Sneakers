@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/src/index.css">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sneakers</title>
+</head>
+
+<body class="w-[95%] h-[100%] pl-[0%] pb-10">
+
+
+    <div class="pl-[100px] pr-[100px]">
+        <div class="flex justify-between items-center py-7 px-9">
+            <div class="flex justify-between font-task">
+                <img src="./src/assets/logo.svg" class="h-5 pr-5">
+                <span class="pl-8 pr-9">Collections</span>
+                <span class="pr-9">Men</span>
+                <span class="pr-9">Women</span>
+                <span class="pr-9">About</span>
+                <span class="pr-9">Contact</span>
+            </div>
+
+            <div class="flex justify-between items-center pr-5">
+
+                <img onclick="cartToggle()" src="./src/assets/icon-cart.svg" alt="" class="h-5 cursor-pointer pr-5 relative">
+                <div class="mx-10 shadow-2xl rounded-xl w-[21%] h-auto px-4 py-4 absolute top-20 right-28 bg-white invisible" id="cart">
+                    <div class="pb-3"><b>Cart</b></div>
+                    <hr>
+
+                    <div class="flex justify-center items-center py-4">
+                        <div>
+                            <img src="./src/assets/image-product-1-thumbnail.jpg" alt="" class="w-[100%] h-[80%] rounded-[5px]">
+                        </div>
+                        <div class="w-[300%] pl-4">
+
+                            <p>Fall Limited Edition Sneakers<br>$125.00 x <span id="countFinal"></span> <b>$<span id="final"></span></b></p>
+                        </div>
+                        <img src="./src/assets/icon-delete.svg" alt=""> </div>
+
+                    <div class="bg-[#ff7d1a] flex justify-center items-center py-3 rounded-[10px]">
+                        <button type="submit" class="text-white">Checkout</button>
+                    </div>
+
+
+                </div>
+                <img src="./src/assets/image-avatar.png" alt="" class="w-10">
+            </div>
+
+        </div>
+
+        <hr>
+
+
+        <div class="flex justify-between pt-[90px] pl-[8%] pr-[7%]">
+
+            <div class="flex-col justify-between">
+                <div>
+                    <img src="./src/assets/image-product-1.jpg" alt="" class="w-[100%] h-[100%] rounded-[15px]" id="img1" onclick="visi()">
+                </div>
+                <br>
+                <div class="flex justify-between">
+                    <img src="./src/assets/image-product-1-thumbnail.jpg" alt="" class="w-[80px] rounded-[15px]" id="pic1" onclick="fpic1()">
+                    <img src="./src/assets/image-product-2-thumbnail.jpg" alt="" class="w-[80px] rounded-[15px]" id="pic2" onclick="fpic2()">
+                    <img src="./src/assets/image-product-3-thumbnail.jpg" alt="" class="w-[80px] rounded-[15px]" id="pic3" onclick="fpic3()">
+                    <img src="./src/assets/image-product-4-thumbnail.jpg" alt="" class="w-[80px] rounded-[15px]" id="pic4" onclick="fpic4()">
+                </div>
+
+            </div>
+            <div class="flex-col justify-end pl-[10%] pt-[7%] pr-8 w-[100%]">
+                <div class=" text-[16px]">
+
+                    <h5 class="text-[#ff7d1a] font-normal">SNEAKER COMPANY</h5><br>
+                    <h1 class="font-bold text-3xl">Fall Limited Edition<br>Sneakers</h1><br>
+                    <span class="text-[#b6bcc8]">These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstand everything the weather can offer.</span>
+                </div>
+
+                <div class="">
+                    <br>
+                    <div class="flex justify-start items-center">
+                        <h2 class="font-bold text-2xl pr-5">$125.00</h2>
+                        <span class="border-1 bg-[#ffede0] text-[#ff7d1a] text-xs rounded-lg font-bold flex items-center justify-center px-2 h-6">50%</span>
+                    </div>
+                    <br>
+                    <span class="line-through text-[#b6bcc8]">$250.00</span>
+                </div>
+
+                <div class="flex justify-evenly pt-8">
+                    <div class="flex justify-between rounded-[5px] bg-[#f7f8fd]">
+                        <div onclick="decrement()" class="flex justify-center items-center self-center px-2 py-4"><img src="./src/assets/icon-minus.svg" alt=" "></div>
+                        <span class="flex justify-center items-center self-center px-10" id="count"></span>
+                        <div onclick="increment()" class="flex justify-center items-center self-center px-2 py-4"><img src="./src/assets/icon-plus.svg" alt=" "></div>
+                    </div>
+
+                    <div class="bg-[#ff7d1a] rounded-[5px] px-20 py-2" onclick="order()">
+                        <button class=""><img src=" ./src/assets/icon-cart.svg " alt=" " id='btn' class="h-4">
+                        </button>
+                        <label for="btn" class="text-white pl-3">Add to cart</label>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <br><br><br>
+
+    <div class="absolute top-0 w-[100%] h-[120%] flex pt-[20vh] justify-center bg-black bg-opacity-80 invisible" id="pop">
+        <div class="flex-col justify-between w-[30%] h-[30%]">
+            <div class="relative">
+                <img src="./src/assets/icon-close.svg" alt="" class="absolute right-[0%] top-[-4%] bg-white px-2 py-2 rounded-full" onclick="visirem()">
+                <img src="./src/assets/icon-previous.svg" alt="" class="rounded-full absolute top-[50%] bg-white px-3 py-2 ml-[-3%]" onclick="pre()">
+                <img src="./src/assets/image-product-1.jpg" alt="" class="rounded-[15px]" id="img">
+                <img src="./src/assets/icon-next.svg" alt="" class="rounded-full absolute top-[50%] right-[0%] bg-white px-3 py-2 mr-[-3%]" onclick="next()">
+            </div>
+            <br>
+            <div class="flex justify-between">
+                <img src="./src/assets/image-product-1-thumbnail.jpg" alt="" class="w-[80px] rounded-[15px]" onclick="pic1()" id="picpop1">
+                <img src="./src/assets/image-product-2-thumbnail.jpg" alt="" class="w-[80px] rounded-[15px]" onclick="pic2()" id="picpop2">
+                <img src="./src/assets/image-product-3-thumbnail.jpg" alt="" class="w-[80px] rounded-[15px]" onclick="pic3()" id="picpop3">
+                <img src="./src/assets/image-product-4-thumbnail.jpg" alt="" class="w-[80px] rounded-[15px]" onclick="pic4()" id="picpop4">
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function cartToggle() {
+            const cartBlock = document.getElementById('cart');
+            const cList = cartBlock.classList.value.split(' ');
+            if (cList.includes('invisible')) {
+                cartBlock.classList.remove('invisible')
+            } else {
+                cartBlock.classList.add('invisible')
+            }
+
+        }
+
+        var count = 0;
+        document.getElementById("count").innerHTML = count;
+        document.getElementById('countFinal').innerHTML = count;
+        document.getElementById('final').innerHTML = count * 125;
+
+        var list = ["./src/assets/image-product-1.jpg", "./src/assets/image-product-2.jpg", "./src/assets/image-product-3.jpg", "./src/assets/image-product-4.jpg"];
+        var flist = ["http://localhost:3000/src/assets/image-product-1.jpg", "http://localhost:3000/src/assets/image-product-2.jpg", "http://localhost:3000/src/assets/image-product-3.jpg", "http://localhost:3000/src/assets/image-product-4.jpg"]
+
+        function pic1() {
+
+            document.getElementById("img").src = list[0];
+            document.getElementById('picpop1').classList.add("border-4");
+            document.getElementById('picpop1').classList.add("opacity-[50%]");
+            document.getElementById('picpop1').classList.add("border-[#ff7d1a]");
+
+            document.getElementById('picpop2').classList.remove("border-4");
+            document.getElementById('picpop2').classList.remove("opacity-[50%]");
+            document.getElementById('picpop2').classList.remove("border-[#ff7d1a]");
+
+            document.getElementById('picpop3').classList.remove("border-4");
+            document.getElementById('picpop3').classList.remove("opacity-[50%]");
+            document.getElementById('picpop3').classList.remove("border-[#ff7d1a]");
+
+            document.getElementById('picpop4').classList.remove("border-4");
+            document.getElementById('picpop4').classList.remove("opacity-[50%]");
+            document.getElementById('picpop4').classList.remove("border-[#ff7d1a]");
+
+
+
+        }
+
+        function pic2() {
+
+            document.getElementById("img").src = list[1];
+            document.getElementById('picpop2').classList.add("border-4");
+            document.getElementById('picpop2').classList.add("opacity-[50%]");
+            document.getElementById('picpop2').classList.add("border-[#ff7d1a]");
+
+
+            document.getElementById('picpop1').classList.remove("border-4");
+            document.getElementById('picpop1').classList.remove("opacity-[50%]");
+            document.getElementById('picpop1').classList.remove("border-[#ff7d1a]");
+
+            document.getElementById('picpop3').classList.remove("border-4");
+            document.getElementById('picpop3').classList.remove("opacity-[50%]");
+            document.getElementById('picpop3').classList.remove("border-[#ff7d1a]");
+
+            document.getElementById('picpop4').classList.remove("border-4");
+            document.getElementById('picpop4').classList.remove("opacity-[50%]");
+            document.getElementById('picpop4').classList.remove("border-[#ff7d1a]");
+        }
+
+        function pic3() {
+
+            document.getElementById("img").src = list[2];
+            document.getElementById('picpop3').classList.add("border-4");
+            document.getElementById('picpop3').classList.add("opacity-[50%]");
+            document.getElementById('picpop3').classList.add("border-[#ff7d1a]");
+
+            document.getElementById('picpop2').classList.remove("border-4");
+            document.getElementById('picpop2').classList.remove("opacity-[50%]");
+            document.getElementById('picpop2').classList.remove("border-[#ff7d1a]");
+
+            document.getElementById('picpop1').classList.remove("border-4");
+            document.getElementById('picpop1').classList.remove("opacity-[50%]");
+            document.getElementById('picpop1').classList.remove("border-[#ff7d1a]");
+
+            document.getElementById('picpop4').classList.remove("border-4");
+            document.getElementById('picpop4').classList.remove("opacity-[50%]");
+            document.getElementById('picpop4').classList.remove("border-[#ff7d1a]");
+        }
+
+        function pic4() {
+
+            document.getElementById("img").src = list[3];
+            document.getElementById('picpop4').classList.add("border-4");
+            document.getElementById('picpop4').classList.add("opacity-[50%]");
+            document.getElementById('picpop4').classList.add("border-[#ff7d1a]");
+
+            document.getElementById('picpop2').classList.remove("border-4");
+            document.getElementById('picpop2').classList.remove("opacity-[50%]");
+            document.getElementById('picpop2').classList.remove("border-[#ff7d1a]");
+
+            document.getElementById('picpop3').classList.remove("border-4");
+            document.getElementById('picpop3').classList.remove("opacity-[50%]");
+            document.getElementById('picpop3').classList.remove("border-[#ff7d1a]");
+
+            document.getElementById('picpop1').classList.remove("border-4");
+            document.getElementById('picpop1').classList.remove("opacity-[50%]");
+            document.getElementById('picpop1').classList.remove("border-[#ff7d1a]");
+        }
+
+        function fpic1() {
+
+            document.getElementById("img1").src = list[0];
+            document.getElementById('pic1').classList.add("border-4");
+            document.getElementById('pic1').classList.add("opacity-25");
+            document.getElementById('pic1').classList.add("border-[#ff7d1a]");
+
+            document.getElementById('pic2').classList.remove("border-4");
+            document.getElementById('pic2').classList.remove("opacity-25");
+            document.getElementById('pic2').classList.remove("border-[#ff7d1a]");
+
+
+            document.getElementById('pic3').classList.remove("border-4");
+            document.getElementById('pic3').classList.remove("opacity-25");
+            document.getElementById('pic3').classList.remove("border-[#ff7d1a]");
+
+            document.getElementById('pic4').classList.remove("border-4");
+            document.getElementById('pic4').classList.remove("opacity-25");
+            document.getElementById('pic4').classList.remove("border-[#ff7d1a]");
+        }
+
+        function fpic2() {
+
+            document.getElementById("img1").src = list[1];
+            document.getElementById('pic2').classList.add("border-4");
+            document.getElementById('pic2').classList.add("opacity-25");
+            document.getElementById('pic2').classList.add("border-[#ff7d1a]");
+
+            document.getElementById('pic1').classList.remove("border-4");
+            document.getElementById('pic1').classList.remove("opacity-25");
+            document.getElementById('pic1').classList.remove("border-[#ff7d1a]");
+
+
+            document.getElementById('pic3').classList.remove("border-4");
+            document.getElementById('pic3').classList.remove("opacity-25");
+            document.getElementById('pic3').classList.remove("border-[#ff7d1a]");
+
+            document.getElementById('pic4').classList.remove("border-4");
+            document.getElementById('pic4').classList.remove("opacity-25");
+            document.getElementById('pic4').classList.remove("border-[#ff7d1a]");
+        }
+
+        function fpic3() {
+
+            document.getElementById("img1").src = list[2];
+            document.getElementById('pic3').classList.add("border-4");
+            document.getElementById('pic3').classList.add("opacity-25");
+            document.getElementById('pic3').classList.add("border-[#ff7d1a]");
+
+            document.getElementById('pic2').classList.remove("border-4");
+            document.getElementById('pic2').classList.remove("opacity-25");
+            document.getElementById('pic2').classList.remove("border-[#ff7d1a]");
+
+
+            document.getElementById('pic1').classList.remove("border-4");
+            document.getElementById('pic1').classList.remove("opacity-25");
+            document.getElementById('pic1').classList.remove("border-[#ff7d1a]");
+
+            document.getElementById('pic4').classList.remove("border-4");
+            document.getElementById('pic4').classList.remove("opacity-25");
+            document.getElementById('pic4').classList.remove("border-[#ff7d1a]");
+        }
+
+        function fpic4() {
+
+            document.getElementById("img1").src = list[3];
+            document.getElementById('pic4').classList.add("border-4");
+            document.getElementById('pic4').classList.add("opacity-25");
+            document.getElementById('pic4').classList.add("border-[#ff7d1a]");
+
+            document.getElementById('pic2').classList.remove("border-4");
+            document.getElementById('pic2').classList.remove("opacity-25");
+            document.getElementById('pic2').classList.remove("border-[#ff7d1a]");
+
+
+            document.getElementById('pic3').classList.remove("border-4");
+            document.getElementById('pic3').classList.remove("opacity-25");
+            document.getElementById('pic3').classList.remove("border-[#ff7d1a]");
+
+            document.getElementById('pic1').classList.remove("border-4");
+            document.getElementById('pic1').classList.remove("opacity-25");
+            document.getElementById('pic1').classList.remove("border-[#ff7d1a]");
+        }
+
+        function decrement() {
+            if (count <= 0) {
+                count = 0;
+            } else {
+                count -= 1;
+            }
+
+            document.getElementById("count").innerHTML = count;
+
+        }
+
+
+        function increment() {
+            count += 1;
+
+            document.getElementById("count").innerHTML = count;
+
+        }
+
+        function order() {
+
+            document.getElementById("countFinal").innerHTML = count;
+            document.getElementById('final').innerHTML = count * 125;
+            const cartBlock = document.getElementById('cart');
+            const cList = cartBlock.classList.value.split(' ');
+            if (count > 0) {
+                if (cList.includes('invisible')) {
+                    cartBlock.classList.remove('invisible')
+                    setTimeout(() => {
+                        cartBlock.classList.add('invisible')
+                    }, 1500);
+                }
+            }
+
+        }
+
+        function visi() {
+            const popimgs = document.getElementById('pop');
+            const cList = popimgs.classList.value.split(' ');
+
+            if (cList.includes('invisible')) {
+                popimgs.classList.remove('invisible');
+            }
+
+        }
+
+        function visirem() {
+            const popimgs = document.getElementById('pop');
+            const cList = popimgs.classList.value.split(' ');
+
+            if (cList.includes('invisible') == false) {
+                popimgs.classList.add('invisible');
+            }
+
+        }
+
+        function next() {
+            if (document.getElementById("img").src == flist[0]) {
+                document.getElementById("img").src = list[1];
+            } else if (document.getElementById("img").src == flist[1]) {
+                document.getElementById("img").src = list[2];
+            } else if (document.getElementById("img").src == flist[2]) {
+                document.getElementById("img").src = flist[3];
+            } else {
+                document.getElementById("img").src = flist[0];
+            }
+        }
+
+        function pre() {
+            if (document.getElementById("img").src == flist[0]) {
+                document.getElementById("img").src = flist[3];
+            } else if (document.getElementById("img").src == flist[1]) {
+                document.getElementById("img").src = flist[0];
+            } else if (document.getElementById("img").src == flist[2]) {
+                document.getElementById("img").src = flist[1];
+            } else {
+                document.getElementById("img").src = flist[2];
+            }
+        }
+    </script>
+
+
+
+</body>
+
+</html>
