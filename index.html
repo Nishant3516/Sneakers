@@ -3,10 +3,11 @@
 
 <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="/src/index.css">
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.17e50649.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sneakers</title>
+    <link rel="stylesheet" href="/assets/index.6ea138bd.css">
 </head>
 
 <body class="w-[95%] h-[100%] pl-[0%] pb-10">
@@ -15,7 +16,7 @@
     <div class="pl-[100px] pr-[100px]">
         <div class="flex justify-between items-center py-7 px-9">
             <div class="flex justify-between font-task">
-                <img src="./src/assets/logo.svg" class="h-5 pr-5">
+                <img src="/assets/logo.5efe6b0e.svg" class="h-5 pr-5">
                 <span class="pl-8 pr-9">Collections</span>
                 <span class="pr-9">Men</span>
                 <span class="pr-9">Women</span>
@@ -25,20 +26,20 @@
 
             <div class="flex justify-between items-center pr-5">
 
-                <img onclick="cartToggle()" src="./src/assets/icon-cart.svg" alt="" class="h-5 cursor-pointer pr-5 relative">
+                <img onclick="cartToggle()" src="/assets/icon-cart.987a9f06.svg" alt="" class="h-5 cursor-pointer pr-5 relative">
                 <div class="mx-10 shadow-2xl rounded-xl w-[21%] h-auto px-4 py-4 absolute top-20 right-28 bg-white invisible" id="cart">
                     <div class="pb-3"><b>Cart</b></div>
                     <hr>
 
                     <div class="flex justify-center items-center py-4">
                         <div>
-                            <img src="./src/assets/image-product-1-thumbnail.jpg" alt="" class="w-[100%] h-[80%] rounded-[5px]">
+                            <img src="/assets/image-product-1-thumbnail.4e7f5e07.jpg" alt="" class="w-[100%] h-[80%] rounded-[5px]">
                         </div>
                         <div class="w-[300%] pl-4">
 
                             <p>Fall Limited Edition Sneakers<br>$125.00 x <span id="countFinal"></span> <b>$<span id="final"></span></b></p>
                         </div>
-                        <img src="./src/assets/icon-delete.svg" alt=""> </div>
+                        <img src="/assets/icon-delete.11e8f9c5.svg" alt=""> </div>
 
                     <div class="bg-[#ff7d1a] flex justify-center items-center py-3 rounded-[10px]">
                         <button type="submit" class="text-white">Checkout</button>
@@ -46,7 +47,7 @@
 
 
                 </div>
-                <img src="./src/assets/image-avatar.png" alt="" class="w-10">
+                <img src="/assets/image-avatar.88751761.png" alt="" class="w-10">
             </div>
 
         </div>
@@ -58,14 +59,14 @@
 
             <div class="flex-col justify-between">
                 <div>
-                    <img src="./src/assets/image-product-1.jpg" alt="" class="w-[100%] h-[100%] rounded-[15px]" id="img1" onclick="visi()">
+                    <img src="/assets/image-product-1.0c6fe8e3.jpg" alt="" class="w-[100%] h-[100%] rounded-[15px]" id="img1" onclick="visi()">
                 </div>
                 <br>
                 <div class="flex justify-between">
-                    <img src="./src/assets/image-product-1-thumbnail.jpg" alt="" class="w-[80px] rounded-[15px]" id="pic1" onclick="fpic1()">
-                    <img src="./src/assets/image-product-2-thumbnail.jpg" alt="" class="w-[80px] rounded-[15px]" id="pic2" onclick="fpic2()">
-                    <img src="./src/assets/image-product-3-thumbnail.jpg" alt="" class="w-[80px] rounded-[15px]" id="pic3" onclick="fpic3()">
-                    <img src="./src/assets/image-product-4-thumbnail.jpg" alt="" class="w-[80px] rounded-[15px]" id="pic4" onclick="fpic4()">
+                    <img src="/assets/image-product-1-thumbnail.4e7f5e07.jpg" alt="" class="w-[80px] rounded-[15px]" id="pic1" onclick="fpic1()">
+                    <img src="/assets/image-product-2-thumbnail.ad60b1cc.jpg" alt="" class="w-[80px] rounded-[15px]" id="pic2" onclick="fpic2()">
+                    <img src="/assets/image-product-3-thumbnail.46570324.jpg" alt="" class="w-[80px] rounded-[15px]" id="pic3" onclick="fpic3()">
+                    <img src="/assets/image-product-4-thumbnail.7125519d.jpg" alt="" class="w-[80px] rounded-[15px]" id="pic4" onclick="fpic4()">
                 </div>
 
             </div>
@@ -89,13 +90,13 @@
 
                 <div class="flex justify-evenly pt-8">
                     <div class="flex justify-between rounded-[5px] bg-[#f7f8fd]">
-                        <div onclick="decrement()" class="flex justify-center items-center self-center px-2 py-4"><img src="./src/assets/icon-minus.svg" alt=" "></div>
+                        <div onclick="decrement()" class="flex justify-center items-center self-center px-2 py-4"><img src="/assets/icon-minus.7f289c13.svg" alt=" "></div>
                         <span class="flex justify-center items-center self-center px-10" id="count"></span>
-                        <div onclick="increment()" class="flex justify-center items-center self-center px-2 py-4"><img src="./src/assets/icon-plus.svg" alt=" "></div>
+                        <div onclick="increment()" class="flex justify-center items-center self-center px-2 py-4"><img src="/assets/icon-plus.fd8d372c.svg" alt=" "></div>
                     </div>
 
                     <div class="bg-[#ff7d1a] rounded-[5px] px-20 py-2" onclick="order()">
-                        <button class=""><img src=" ./src/assets/icon-cart.svg " alt=" " id='btn' class="h-4">
+                        <button class=""><img src="/dist/assets/icon-cart.987a9f06.svg " alt=" " id='btn' class="h-4">
                         </button>
                         <label for="btn" class="text-white pl-3">Add to cart</label>
                     </div>
@@ -110,17 +111,17 @@
     <div class="absolute top-0 w-[100%] h-[120%] flex pt-[20vh] justify-center bg-black bg-opacity-80 invisible" id="pop">
         <div class="flex-col justify-between w-[30%] h-[30%]">
             <div class="relative">
-                <img src="./src/assets/icon-close.svg" alt="" class="absolute right-[0%] top-[-4%] bg-white px-2 py-2 rounded-full" onclick="visirem()">
-                <img src="./src/assets/icon-previous.svg" alt="" class="rounded-full absolute top-[50%] bg-white px-3 py-2 ml-[-3%]" onclick="pre()">
-                <img src="./src/assets/image-product-1.jpg" alt="" class="rounded-[15px]" id="img">
-                <img src="./src/assets/icon-next.svg" alt="" class="rounded-full absolute top-[50%] right-[0%] bg-white px-3 py-2 mr-[-3%]" onclick="next()">
+                <img src="/assets/icon-close.22a11be2.svg" alt="" class="absolute right-[0%] top-[-4%] bg-white px-2 py-2 rounded-full" onclick="visirem()">
+                <img src="/assets/icon-previous.7543ce3f.svg" alt="" class="rounded-full absolute top-[50%] bg-white px-3 py-2 ml-[-3%]" onclick="pre()">
+                <img src="/assets/image-product-1.0c6fe8e3.jpg" alt="" class="rounded-[15px]" id="img">
+                <img src="/assets/icon-next.de5dbcf9.svg" alt="" class="rounded-full absolute top-[50%] right-[0%] bg-white px-3 py-2 mr-[-3%]" onclick="next()">
             </div>
             <br>
             <div class="flex justify-between">
-                <img src="./src/assets/image-product-1-thumbnail.jpg" alt="" class="w-[80px] rounded-[15px]" onclick="pic1()" id="picpop1">
-                <img src="./src/assets/image-product-2-thumbnail.jpg" alt="" class="w-[80px] rounded-[15px]" onclick="pic2()" id="picpop2">
-                <img src="./src/assets/image-product-3-thumbnail.jpg" alt="" class="w-[80px] rounded-[15px]" onclick="pic3()" id="picpop3">
-                <img src="./src/assets/image-product-4-thumbnail.jpg" alt="" class="w-[80px] rounded-[15px]" onclick="pic4()" id="picpop4">
+                <img src="/assets/image-product-1-thumbnail.4e7f5e07.jpg" alt="" class="w-[80px] rounded-[15px]" onclick="pic1()" id="picpop1">
+                <img src="/assets/image-product-2-thumbnail.ad60b1cc.jpg" alt="" class="w-[80px] rounded-[15px]" onclick="pic2()" id="picpop2">
+                <img src="/assets/image-product-3-thumbnail.46570324.jpg" alt="" class="w-[80px] rounded-[15px]" onclick="pic3()" id="picpop3">
+                <img src="/assets/image-product-4-thumbnail.7125519d.jpg" alt="" class="w-[80px] rounded-[15px]" onclick="pic4()" id="picpop4">
             </div>
 
         </div>
@@ -143,8 +144,8 @@
         document.getElementById('countFinal').innerHTML = count;
         document.getElementById('final').innerHTML = count * 125;
 
-        var list = ["./src/assets/image-product-1.jpg", "./src/assets/image-product-2.jpg", "./src/assets/image-product-3.jpg", "./src/assets/image-product-4.jpg"];
-        var flist = ["http://localhost:3000/src/assets/image-product-1.jpg", "http://localhost:3000/src/assets/image-product-2.jpg", "http://localhost:3000/src/assets/image-product-3.jpg", "http://localhost:3000/src/assets/image-product-4.jpg"]
+        var list = ["/assets/image-product-1.0c6fe8e3.jpg", "./src/assets/image-product-2.jpg", "./src/assets/image-product-3.jpg", "./src/assets/image-product-4.jpg"];
+        var flist = ["http://localhost:3000/dist/assets/image-product-1.0c6fe8e3.jpg", "http://localhost:3000/src/assets/image-product-2.jpg", "http://localhost:3000/src/assets/image-product-3.jpg", "http://localhost:3000/src/assets/image-product-4.jpg"]
 
         function pic1() {
 
